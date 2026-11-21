@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI calc Privacy Policy</title>
+<meta name="description" content="Privacy policy for AI calc, the offline scientific calculator by Ajirix Technologies. Your calculations never leave your phone.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#071431">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="AI calc Privacy Policy">
+<meta property="og:description" content="What AI calc collects, why, and your rights. The app works fully offline.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F4F7FC;
+    --surface: #FFFFFF;
+    --surface-soft: #F5F8FE;
+    --line: #E3EAF5;
+    --text: #0F1B33;
+    --muted: #55657F;
+    --faint: #8494AE;
+    --accent: #2563EB;
+    --accent-soft: #EAF1FF;
+    --grad-a: #3B82F6;
+    --grad-b: #1D4ED8;
+    --good: #0E8F63;
+    --good-soft: #E6F6EF;
+    --brand: #7A12E8;
+    --shadow: 0 1px 2px rgba(15, 27, 51, .04), 0 12px 32px -12px rgba(15, 27, 51, .12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #070C18;
+      --surface: #0E1628;
+      --surface-soft: #121D33;
+      --line: #1F2C47;
+      --text: #EAF0FB;
+      --muted: #A3B2CC;
+      --faint: #6F81A2;
+      --accent: #7EA9FF;
+      --accent-soft: #15254A;
+      --grad-a: #6EA2FF;
+      --grad-b: #3B6EF0;
+      --good: #57D2A0;
+      --good-soft: #0F2A24;
+      --brand: #B784FF;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 16px 40px -16px rgba(0, 0, 0, .6);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.7 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  h1, h2, .display { font-family: "Plus Jakarta Sans", Inter, system-ui, sans-serif; }
+
+  /* Top bar */
+  .topbar {
+    position: sticky; top: 0; z-index: 20;
+    backdrop-filter: saturate(160%) blur(16px);
+    -webkit-backdrop-filter: saturate(160%) blur(16px);
+    background: rgba(7, 20, 49, .94);
+    border-bottom: 1px solid rgba(126, 169, 255, .14);
+  }
+  .topbar-inner {
+    max-width: 1120px; margin: 0 auto; padding: 12px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .mark { display: flex; align-items: center; gap: 10px; color: #fff; font-weight: 700; }
+  .mark:hover { text-decoration: none; }
+  .mark img { width: 30px; height: 30px; border-radius: 8px; }
+  .mark span { font-family: "Plus Jakarta Sans", Inter, sans-serif; font-size: 17px; letter-spacing: -.2px; }
+  .topbar .tag {
+    font-size: 12px; font-weight: 600; color: #BCD3FF; letter-spacing: .04em;
+    padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(126, 169, 255, .28);
+  }
+
+  /* Hero */
+  .hero {
+    position: relative; overflow: hidden; color: #fff;
+    background:
+      radial-gradient(900px 420px at 85% -10%, rgba(59, 130, 246, .45), transparent 65%),
+      radial-gradient(600px 360px at -5% 10%, rgba(122, 18, 232, .22), transparent 70%),
+      linear-gradient(160deg, #071431 0%, #0A1C47 55%, #06122E 100%);
+    padding: 72px 24px 140px;
+  }
+  .hero::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .08;
+    background-image:
+      linear-gradient(rgba(188, 211, 255, .9) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(188, 211, 255, .9) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(70% 80% at 70% 30%, #000 20%, transparent 75%);
+            mask-image: radial-gradient(70% 80% at 70% 30%, #000 20%, transparent 75%);
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; display: flex; align-items: center; gap: 40px; }
+  .hero-icon {
+    flex: none; width: 128px; height: 128px; border-radius: 32px; overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(126, 169, 255, .35), 0 24px 60px -10px rgba(0, 30, 140, .8), 0 0 80px rgba(59, 130, 246, .45);
+  }
+  .hero-icon img { width: 100%; height: 100%; display: block; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #9FC0FF;
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, #6EA2FF, transparent); }
+  h1 {
+    margin: 12px 0 14px; font-size: clamp(38px, 6vw, 60px); line-height: 1.05; letter-spacing: -1.6px; font-weight: 800;
+  }
+  h1 .grad { background: linear-gradient(120deg, #FFFFFF 10%, #9CC2FF 60%, #5C93FF); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .lede { max-width: 560px; margin: 0; font-size: 18px; color: #C9D9F7; line-height: 1.6; }
+  .meta { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .meta span {
+    font-size: 13px; color: #CFE0FF; padding: 6px 12px; border-radius: 999px;
+    background: rgba(255, 255, 255, .06); border: 1px solid rgba(126, 169, 255, .2);
+  }
+
+  /* Highlights */
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .highlights {
+    position: relative; z-index: 2; margin-top: -84px;
+    display: grid; gap: 16px; grid-template-columns: repeat(4, 1fr);
+  }
+  .hl {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 22px;
+    padding: 22px; box-shadow: var(--shadow);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .hl:hover { transform: translateY(-3px); }
+  .badge {
+    width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--grad-a), var(--grad-b));
+    box-shadow: 0 0 0 6px var(--accent-soft), 0 10px 22px -8px rgba(37, 99, 235, .6);
+  }
+  .badge.good { background: linear-gradient(135deg, #22C38A, #0E8F63); box-shadow: 0 0 0 6px var(--good-soft), 0 10px 22px -8px rgba(14, 143, 99, .55); }
+  .badge svg { width: 22px; height: 22px; fill: #fff; }
+  .hl h3 { margin: 18px 0 6px; font-size: 16px; font-weight: 700; letter-spacing: -.1px; }
+  .hl p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+  /* Layout */
+  .layout { display: grid; grid-template-columns: 230px 1fr; gap: 40px; padding-top: 48px; padding-bottom: 72px; }
+  .toc { position: sticky; top: 92px; align-self: start; }
+  .toc-title { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--faint); margin: 0 0 12px 12px; }
+  .toc a {
+    display: flex; gap: 10px; align-items: baseline; padding: 8px 12px; border-radius: 10px;
+    color: var(--muted); font-weight: 500; font-size: 14px;
+  }
+  .toc a span { font-variant-numeric: tabular-nums; color: var(--faint); font-size: 12px; font-weight: 600; }
+  .toc a:hover { background: var(--surface); color: var(--text); text-decoration: none; }
+
+  section {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 24px;
+    padding: 32px 34px; margin-bottom: 18px; box-shadow: var(--shadow);
+  }
+  .sec-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .sec-icon {
+    flex: none; width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
+    background: var(--accent-soft); color: var(--accent);
+  }
+  .sec-icon svg { width: 20px; height: 20px; fill: currentColor; }
+  .sec-num { font-size: 12px; font-weight: 700; letter-spacing: .12em; color: var(--faint); text-transform: uppercase; }
+  h2 { margin: 0; font-size: 22px; letter-spacing: -.4px; line-height: 1.25; }
+  p { margin: 0 0 14px; }
+  p:last-child { margin-bottom: 0; }
+  .muted { color: var(--muted); }
+  ul.clean { list-style: none; margin: 0 0 14px; padding: 0; }
+  ul.clean li { position: relative; padding-left: 28px; margin: 10px 0; }
+  ul.clean li::before {
+    content: ""; position: absolute; left: 4px; top: .62em; width: 8px; height: 8px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--grad-a), var(--grad-b));
+    box-shadow: 0 0 0 4px var(--accent-soft);
+  }
+
+  .callout {
+    display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; border-radius: 18px;
+    background: var(--good-soft); border: 1px solid color-mix(in srgb, var(--good) 30%, transparent);
+  }
+  .callout .badge { width: 40px; height: 40px; flex: none; }
+  .callout .badge svg { width: 19px; height: 19px; }
+
+  .data { display: grid; gap: 10px; margin: 4px 0 18px; }
+  .row {
+    display: grid; grid-template-columns: 190px 1fr; gap: 18px; padding: 16px 18px; border-radius: 16px;
+    background: var(--surface-soft); border: 1px solid var(--line);
+  }
+  .row b { display: block; font-size: 15px; }
+  .row small { display: block; margin-top: 2px; font-size: 12.5px; color: var(--faint); font-weight: 500; }
+  .row p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.6; }
+  .note {
+    padding: 14px 18px; border-radius: 14px; border: 1px dashed var(--line);
+    color: var(--muted); font-size: 14.5px;
+  }
+
+  .contact-card {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px;
+    padding: 22px; border-radius: 20px; margin-top: 6px;
+    background:
+      radial-gradient(400px 160px at 100% 0%, rgba(59, 130, 246, .22), transparent 70%),
+      var(--surface-soft);
+    border: 1px solid var(--line);
+  }
+  .contact-card .who { font-size: 13px; color: var(--faint); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+  .contact-card .addr { font-family: "Plus Jakarta Sans", Inter, sans-serif; font-size: 20px; font-weight: 700; letter-spacing: -.2px; color: var(--text); word-break: break-all; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border-radius: 14px;
+    color: #fff; font-weight: 700; font-size: 15px;
+    background: linear-gradient(135deg, var(--grad-a), var(--grad-b));
+    box-shadow: 0 12px 28px -10px rgba(37, 99, 235, .7);
+    transition: transform .2s ease, filter .2s ease;
+  }
+  .btn:hover { text-decoration: none; transform: translateY(-1px); filter: brightness(1.06); }
+  .btn svg { width: 18px; height: 18px; fill: #fff; }
+
+  footer { border-top: 1px solid var(--line); }
+  .footer-inner {
+    max-width: 1120px; margin: 0 auto; padding: 28px 24px 40px;
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+    color: var(--faint); font-size: 13px;
+  }
+  .credit { display: flex; align-items: center; gap: 10px; }
+  .credit img { width: 30px; height: 30px; }
+  .credit .by { font-size: 9px; font-weight: 700; letter-spacing: .16em; color: var(--faint); }
+  .credit .co { font-size: 15px; font-weight: 700; color: var(--brand); line-height: 1.2; }
+
+  /* Entrance */
+  @media (prefers-reduced-motion: no-preference) {
+    .rise { opacity: 0; transform: translateY(14px); animation: rise .7s cubic-bezier(.2, .7, .2, 1) forwards; }
+    .d1 { animation-delay: .05s; } .d2 { animation-delay: .12s; } .d3 { animation-delay: .19s; } .d4 { animation-delay: .26s; }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+  }
+
+  @media (max-width: 980px) {
+    .highlights { grid-template-columns: repeat(2, 1fr); }
+    .layout { grid-template-columns: 1fr; }
+    .toc { display: none; }
+  }
+  @media (max-width: 640px) {
+    .topbar .tag { display: none; }
+    .hero { padding: 48px 20px 120px; }
+    .hero-inner { flex-direction: column; align-items: flex-start; gap: 22px; }
+    .hero-icon { width: 88px; height: 88px; border-radius: 24px; }
+    .lede { font-size: 16px; }
+    .wrap { padding: 0 16px; }
+    .highlights { grid-template-columns: 1fr; gap: 12px; margin-top: -76px; }
+    .hl { display: grid; grid-template-columns: auto 1fr; column-gap: 16px; align-items: center; padding: 18px; }
+    .hl .badge { grid-row: span 2; }
+    .hl h3 { margin: 0 0 2px; }
+    section { padding: 24px 20px; border-radius: 20px; }
+    .row { grid-template-columns: 1fr; gap: 6px; }
+    .contact-card .addr { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="mark" href="#top"><img src="assets/app-icon.png" alt=""><span>AI calc</span></a>
+    <span class="tag">Privacy Policy</span>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-icon rise d1"><img src="assets/app-icon.png" alt="AI calc app icon"></div>
+    <div class="rise d2">
+      <div class="eyebrow">AI calc · by Ajirix Technologies</div>
+      <h1><span class="grad">Privacy Policy</span></h1>
+      <p class="lede">AI calc works completely offline. Your calculations never leave your phone. Here's exactly what the app shares, why, and the choices you have.</p>
+      <div class="meta">
+        <span>Effective 21 November 2026</span>
+        <span>Android · com.ajirixtechnologies.aicalc</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="highlights">
+    <div class="hl rise d1">
+      <div class="badge good"><svg viewBox="0 0 24 24"><path d="M19.35,10.04C18.67,6.59 15.64,4 12,4c-1.48,0 -2.85,0.43 -4.01,1.17l1.46,1.46C10.21,6.23 11.08,6 12,6c3.04,0 5.5,2.46 5.5,5.5v0.5H19c1.66,0 3,1.34 3,3 0,1.13 -0.64,2.11 -1.56,2.62l1.45,1.45C23.16,18.16 24,16.68 24,15c0,-2.64 -2.05,-4.78 -4.65,-4.96zM3,5.27l2.75,2.74C2.56,8.15 0,10.77 0,14c0,3.31 2.69,6 6,6h11.73l2,2L21,20.73 4.27,4 3,5.27zM7.73,10l8,8H6c-2.21,0 -4,-1.79 -4,-4s1.79,-4 4,-4h1.73z"/></svg></div>
+      <h3>Works offline</h3>
+      <p>Every calculation runs on your phone. No internet needed to calculate.</p>
+    </div>
+    <div class="hl rise d2">
+      <div class="badge good"><svg viewBox="0 0 24 24"><path d="M18,8h-1V6c0,-2.76 -2.24,-5 -5,-5S7,3.24 7,6v2H6c-1.1,0 -2,0.9 -2,2v10c0,1.1 0.9,2 2,2h12c1.1,0 2,-0.9 2,-2V10c0,-1.1 -0.9,-2 -2,-2zM12,17c-1.1,0 -2,-0.9 -2,-2s0.9,-2 2,-2 2,0.9 2,2 -0.9,2 -2,2zM15.1,8H8.9V6c0,-1.71 1.39,-3.1 3.1,-3.1 1.71,0 3.1,1.39 3.1,3.1v2z"/></svg></div>
+      <h3>Your math stays private</h3>
+      <p>Calculations and history are never sent anywhere.</p>
+    </div>
+    <div class="hl rise d3">
+      <div class="badge good"><svg viewBox="0 0 24 24"><path d="M12,1L3,5v6c0,5.55 3.84,10.74 9,12 5.16,-1.26 9,-6.45 9,-12V5l-9,-4zM10,17l-4,-4 1.41,-1.41L10,14.17l6.59,-6.59L18,9l-8,8z"/></svg></div>
+      <h3>No ads, no selling</h3>
+      <p>No adverts, no trackers, and your data is never sold.</p>
+    </div>
+    <div class="hl rise d4">
+      <div class="badge"><svg viewBox="0 0 24 24"><path d="M16,1L8,1C6.34,1 5,2.34 5,4v16c0,1.66 1.34,3 3,3h8c1.66,0 3,-1.34 3,-3L19,4c0,-1.66 -1.34,-3 -3,-3zM14,21h-4v-1h4v1zM17.25,18L6.75,18L6.75,4h10.5v14z"/></svg></div>
+      <h3>What we receive</h3>
+      <p>Phone model, Android version, app version, IP address and an anonymous ID.</p>
+    </div>
+  </div>
+
+  <div class="layout">
+    <nav class="toc" aria-label="Contents">
+      <p class="toc-title">Contents</p>
+      <a href="#who"><span>01</span>Who we are</a>
+      <a href="#offline"><span>02</span>Works offline</a>
+      <a href="#collect"><span>03</span>What we collect</a>
+      <a href="#use"><span>04</span>How we use it</a>
+      <a href="#share"><span>05</span>Who we share it with</a>
+      <a href="#keep"><span>06</span>How long we keep it</a>
+      <a href="#rights"><span>07</span>Your rights</a>
+      <a href="#security"><span>08</span>Security and children</a>
+      <a href="#links"><span>09</span>Other services and changes</a>
+      <a href="#contact"><span>10</span>Contact us</a>
+    </nav>
+
+    <main>
+      <section id="who">
+        <div class="sec-head">
+          <div class="sec-icon"><svg viewBox="0 0 24 24"><path d="M12,7V3H2v18h20V7H12zM6,19H4v-2h2v2zM6,15H4v-2h2v2zM6,11H4V9h2v2zM6,7H4V5h2v2zM10,19H8v-2h2v2zM10,15H8v-2h2v2zM10,11H8V9h2v2zM10,7H8V5h2v2zM20,19h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zM18,11h-2v2h2v-2zM18,15h-2v2h2v-2z"/></svg></div>
+          <div><div class="sec-num">01</div><h2>Who we are</h2></div>
+        </div>
+        <p>AI calc is developed and published by <b>Ajirix Technologies</b> ("we", "us"). We are responsible for the information described in this policy. You can reach us at any time using the contact details at the end of this page.</p>
+      </section>
+
+      <section id="offline">
+        <div class="sec-head">
+          <div class="sec-icon"><svg viewBox="0 0 24 24"><path d="M19.35,10.04C18.67,6.59 15.64,4 12,4c-1.48,0 -2.85,0.43 -4.01,1.17l1.46,1.46C10.21,6.23 11.08,6 12,6c3.04,0 5.5,2.46 5.5,5.5v0.5H19c1.66,0 3,1.34 3,3 0,1.13 -0.64,2.11 -1.56,2.62l1.45,1.45C23.16,18.16 24,16.68 24,15c0,-2.64 -2.05,-4.78 -4.65,-4.96zM3,5.27l2.75,2.74C2.56,8.15 0,10.77 0,14c0,3.31 2.69,6 6,6h11.73l2,2L21,20.73 4.27,4 3,5.27zM7.73,10l8,8H6c-2.21,0 -4,-1.79 -4,-4s1.79,-4 4,-4h1.73z"/></svg></div>
+          <div><div class="sec-num">02</div><h2>The app works offline</h2></div>
+        </div>
+        <div class="callout">
+          <div class="badge good"><svg viewBox="0 0 24 24"><path d="M18,8h-1V6c0,-2.76 -2.24,-5 -5,-5S7,3.24 7,6v2H6c-1.1,0 -2,0.9 -2,2v10c0,1.1 0.9,2 2,2h12c1.1,0 2,-0.9 2,-2V10c0,-1.1 -0.9,-2 -2,-2zM12,17c-1.1,0 -2,-0.9 -2,-2s0.9,-2 2,-2 2,0.9 2,2 -0.9,2 -2,2zM15.1,8H8.9V6c0,-1.71 1.39,-3.1 3.1,-3.1 1.71,0 3.1,1.39 3.1,3.1v2z"/></svg></div>
+          <div>All calculations happen on your device. The expressions you type, your results, your calculation history, the functions you define and your settings are stored only on your phone. <b>We never receive them.</b></div>
+        </div>
+      </section>
+
+      <section id="collect">
+        <div class="sec-head">
+          <div class="sec-icon"><svg viewBox="0 0 24 24"><path d="M16,1L8,1C6.34,1 5,2.34 5,4v16c0,1.66 1.34,3 3,3h8c1.66,0 3,-1.34 3,-3L19,4c0,-1.66 -1.34,-3 -3,-3zM14,21h-4v-1h4v1zM17.25,18L6.75,18L6.75,4h10.5v14z"/></svg></div>
+          <div><div class="sec-num">03</div><h2>Information we collect</h2></div>
+        </div>
+        <p>When the app has an internet connection, it quietly checks in with our server (at most once every 15 minutes while you use it) to find out about updates and notices. Each check-in shares only the following:</p>
+        <div class="data">
+          <div class="row"><div><b>Anonymous device ID</b><small>A random-looking code</small></div><p>Recognises the same phone between check-ins. It is a one-way scrambled form of Android's app-specific ID, so it cannot be traced back to you or used by other apps.</p></div>
+          <div class="row"><div><b>Phone details</b><small>e.g. Samsung SM-A125F</small></div><p>Manufacturer, brand and model, so we can support devices and target fixes.</p></div>
+          <div class="row"><div><b>Android version</b><small>e.g. Android 12</small></div><p>Tells us which fixes apply to your phone.</p></div>
+          <div class="row"><div><b>App version</b><small>e.g. 1.0</small></div><p>Lets us tell you when a newer version is available.</p></div>
+          <div class="row"><div><b>IP address</b><small>e.g. 102.89.x.x</small></div><p>Received automatically with every internet connection. We keep the first and latest one for security and abuse prevention.</p></div>
+          <div class="row"><div><b>Usage dates</b><small>First and last check-in</small></div><p>Dates and a count of check-ins, to understand how many phones use each version.</p></div>
+          <div class="row"><div><b>Message delivery</b><small>e.g. notice #4 delivered</small></div><p>Which update notices or messages your phone has received.</p></div>
+        </div>
+        <p class="note">We do not collect your name, phone number, email, contacts, photos, precise location, or anything you type into the calculator. The app requests no permissions other than internet access.</p>
+      </section>
+
+      <section id="use">
+        <div class="sec-head">
+          <div class="sec-icon"><svg viewBox="0 0 24 24"><path d="M17,1.01L7,1C5.9,1 5,1.9 5,3v18c0,1.1 0.9,2 2,2h10c1.1,0 2,-0.9 2,-2V3c0,-1.1 -0.9,-1.99 -2,-1.99zM17,19H7V5h10v14zM16,13h-3V8h-2v5H8l4,4 4,-4z"/></svg></div>
+          <div><div class="sec-num">04</div><h2>How we use it</h2></div>
+        </div>
+        <ul class="clean">
+          <li>To tell you about new versions and, when a version has a serious problem, to require an update.</li>
+          <li>To show important notices, either to everyone or to a specific phone (for example, a reply to a support request).</li>
+          <li>To understand which phones and app versions are in use, so we can test and fix them.</li>
+          <li>To keep the service secure and prevent abuse.</li>
+        </ul>
+        <p class="muted">We rely on our legitimate interest in keeping the app up to date, working and secure. We do not use this information for advertising or profiling, and we never sell it.</p>
+      </section>
+
+      <section id="share">
+        <div class="sec-head">
+          <div class="sec-icon"><svg viewBox="0 0 24 24"><path d="M19.35,10.04C18.67,6.59 15.64,4 12,4 9.11,4 6.6,5.64 5.35,8.04 2.34,8.36 0,10.91 0,14c0,3.31 2.69,6 6,6h13c2.76,0 5,-2.24 5,-5 0,-2.64 -2.05,-4.78 -4.65,-4.96z"/></svg></div>
+          <div><div class="sec-num">05</div><h2>Who we share it with</h2></div>
+        </div>
+        <p>The information is stored with <b>Supabase</b>, the cloud database provider we use to run the check-in service. Supabase processes it only on our behalf. Its servers may be located outside your country.</p>
+        <p>We do not share it with anyone else, except where the law requires us to.</p>
+      </section>
+
+      <section id="keep">
+        <div class="sec-head">
+          <div class="sec-icon"><svg viewBox="0 0 24 24"><path d="M11.99,2C6.47,2 2,6.48 2,12s4.47,10 9.99,10C17.52,22 22,17.52 22,12S17.52,2 11.99,2zM12,20c-4.42,0 -8,-3.58 -8,-8s3.58,-8 8,-8 8,3.58 8,8 -3.58,8 -8,8zM12.5,7H11v6l5.25,3.15 0.75,-1.23 -4.5,-2.67z"/></svg></div>
+          <div><div class="sec-num">06</div><h2>How long we keep it</h2></div>
+        </div>
+        <p>We keep each phone's record only for as long as it is needed for the purposes above. You can ask us to delete your record at any time. If you uninstall the app, it stops sending any information.</p>
+      </section>
+
+      <section id="rights">
+        <div class="sec-head">
+          <div class="sec-icon"><svg viewBox="0 0 24 24"><path d="M12,1L3,5v6c0,5.55 3.84,10.74 9,12 5.16,-1.26 9,-6.45 9,-12V5l-9,-4zM10,17l-4,-4 1.41,-1.41L10,14.17l6.59,-6.59L18,9l-8,8z"/></svg></div>
+          <div><div class="sec-num">07</div><h2>Your rights</h2></div>
+        </div>
+        <p>Depending on where you live, including under the Nigeria Data Protection Act 2023, you have the right to:</p>
+        <ul class="clean">
+          <li>ask what information we hold about your phone and get a copy of it;</li>
+          <li>ask us to correct or delete it;</li>
+          <li>object to, or ask us to limit, how we use it;</li>
+          <li>complain to your data protection authority. In Nigeria, this is the Nigeria Data Protection Commission (NDPC).</li>
+        </ul>
+        <p>To make a request, contact us and tell us your phone model and roughly when you installed AI calc, so we can find the right record. We will respond within 30 days.</p>
+      </section>
+
+      <section id="security">
+        <div class="sec-head">
+          <div class="sec-icon"><svg viewBox="0 0 24 24"><path d="M18,8h-1V6c0,-2.76 -2.24,-5 -5,-5S7,3.24 7,6v2H6c-1.1,0 -2,0.9 -2,2v10c0,1.1 0.9,2 2,2h12c1.1,0 2,-0.9 2,-2V10c0,-1.1 -0.9,-2 -2,-2zM12,17c-1.1,0 -2,-0.9 -2,-2s0.9,-2 2,-2 2,0.9 2,2 -0.9,2 -2,2zM15.1,8H8.9V6c0,-1.71 1.39,-3.1 3.1,-3.1 1.71,0 3.1,1.39 3.1,3.1v2z"/></svg></div>
+          <div><div class="sec-num">08</div><h2>Security and children</h2></div>
+        </div>
+        <p>Information travels over encrypted (HTTPS) connections, and our database is locked so the app itself cannot read it back. Only Ajirix Technologies can access it.</p>
+        <p>AI calc is a general-purpose calculator suitable for students. It does not ask for or knowingly collect any personal details from anyone, including children.</p>
+      </section>
+
+      <section id="links">
+        <div class="sec-head">
+          <div class="sec-icon"><svg viewBox="0 0 24 24"><path d="M3.9,12c0,-1.71 1.39,-3.1 3.1,-3.1h4V7H7c-2.76,0 -5,2.24 -5,5s2.24,5 5,5h4v-1.9H7c-1.71,0 -3.1,-1.39 -3.1,-3.1zM8,13h8v-2H8v2zM17,7h-4v1.9h4c1.71,0 3.1,1.39 3.1,3.1s-1.39,3.1 -3.1,3.1h-4V17h4c2.76,0 5,-2.24 5,-5s-2.24,-5 -5,-5z"/></svg></div>
+          <div><div class="sec-num">09</div><h2>Other services and changes</h2></div>
+        </div>
+        <p>The developer page in the app links to our Facebook, WhatsApp and Instagram profiles. If you open them, those services' own privacy policies apply.</p>
+        <p>If we change this policy, we will update the effective date at the top. For important changes, we will also tell you inside the app.</p>
+      </section>
+
+      <section id="contact">
+        <div class="sec-head">
+          <div class="sec-icon"><svg viewBox="0 0 24 24"><path d="M20,4H4C2.9,4 2.01,4.9 2.01,6L2,18c0,1.1 0.9,2 2,2h16c1.1,0 2,-0.9 2,-2V6c0,-1.1 -0.9,-2 -2,-2zM20,8l-8,5 -8,-5V6l8,5 8,-5v2z"/></svg></div>
+          <div><div class="sec-num">10</div><h2>Contact us</h2></div>
+        </div>
+        <p>For privacy questions or requests, email Ajirix Technologies.</p>
+        <div class="contact-card">
+          <div>
+            <div class="who">Privacy contact</div>
+            <div class="addr">successajir@gmail.com</div>
+          </div>
+          <a class="btn" href="mailto:successajir@gmail.com?subject=AI%20calc%20privacy%20request">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20,4H4C2.9,4 2.01,4.9 2.01,6L2,18c0,1.1 0.9,2 2,2h16c1.1,0 2,-0.9 2,-2V6c0,-1.1 -0.9,-2 -2,-2zM20,8l-8,5 -8,-5V6l8,5 8,-5v2z"/></svg>
+            Email us
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="credit">
+      <img src="assets/ajirix-logo.png" alt="">
+      <div><div class="by">POWERED BY</div><div class="co">Ajirix Technologies</div></div>
+    </div>
+    <div>© 2026 Ajirix Technologies · AI calc</div>
+  </div>
+</footer>
+
+</body>
+</html>
